@@ -7,7 +7,8 @@ public enum EmBusinessError implements CommonError {
     UNKNOWN_ERROR(10002, "unknown error"),
 
     // user information errors: starts from 20000
-    USER_NOT_EXIST(20001, "User does not exist")
+    USER_NOT_EXIST(20001, "User does not exist"),
+    USER_LOGIN_FAILED(20002, "User telephone or password is not correct")
     ;
 
     private EmBusinessError(int errCode, String errMsg) {
