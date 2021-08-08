@@ -1,26 +1,35 @@
 package com.miaoshaproject.service.model;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 public class ItemModel {
     private Integer id;
 
-    // item name
+    // item title
+    @NotBlank(message = "item title cannot be empty")
     private String title;
 
     // item price
+    @NotNull(message = "item price cannot be empty")
+    @Min(value = 0, message = "item price must be greater than 0")
     private BigDecimal price;
 
     // item storage
+    @NotNull(message = "storage must be filled in")
     private Integer stock;
 
     // item description
+    @NotBlank(message = "item description cannot be empty")
     private String description;
 
     // item sales
     private Integer sales;
 
     // item description picture's url
+    @NotBlank(message = "item picture info cannot be empty")
     private String imgUrl;
 
     public Integer getId() {
