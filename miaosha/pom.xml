@@ -138,7 +138,7 @@
             <!--allow moving the generated files-->
             <verbose>true</verbose>
             <!--allow auto overwrite files-->
-            <overwrite>true</overwrite>
+            <overwrite>false</overwrite>
             <configurationFile>
               src/main/resources/mybatis-generator.xml
             </configurationFile>
