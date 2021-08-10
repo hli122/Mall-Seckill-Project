@@ -44,7 +44,7 @@ public class ItemController extends BaseController {
         return CommonReturnType.create(itemVO);
     }
 
-    // get item information
+    // get item detail information
     @RequestMapping(value = "/get", method = {RequestMethod.GET})
     @ResponseBody
     public CommonReturnType getItem(@RequestParam(name = "id") Integer id) {
