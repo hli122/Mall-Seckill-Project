@@ -106,7 +106,7 @@ public class UserController extends BaseController {
         return CommonReturnType.create(null);
     }
 
-    @RequestMapping("/get")
+    @RequestMapping(value = "/get", method = {RequestMethod.GET})
     @ResponseBody
     public CommonReturnType getUser(@RequestParam(name="id") Integer id) throws BusinessException {
         // call service, get the user object through id and return to the front end
